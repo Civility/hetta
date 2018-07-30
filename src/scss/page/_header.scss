@@ -1,0 +1,42 @@
+/* header */
+.header {
+	background: url(../img/header.jpg)no-repeat center center;
+	background-size: cover;
+	min-height: 100vh;
+}
+/*banner*/
+.banner{
+	.text{
+		line-height: 1.5;
+	}
+}
+/*navigation*/
+.navigation{
+	z-index: 99;
+	.dropdown-toggle:after{
+		content: "\271A";
+		margin-left: auto;
+		border-left: none;
+		border-bottom: none;
+		border-right: none;
+		margin-left: 0;
+		border-top:none;
+		color:$primary;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+	}
+}
+.navbar{
+	padding: 0 1rem;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+	padding: 0.7rem 1rem;
+}
+.nav-pills .nav-link{
+	border-radius: 0;
+}
+.nav-link{
+	padding: 0.7rem 1rem;
+}

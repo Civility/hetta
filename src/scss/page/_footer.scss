@@ -1,0 +1,12 @@
+//contact
+.contact{
+	background: url(../img/contact.jpg)no-repeat 0 100%;
+	min-height: 100vh;
+	background-size: cover;
+	.card{
+		background-color: transparent;
+	}
+	.form-control{
+		border-color: $primary;
+	}
+}

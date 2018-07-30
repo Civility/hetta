@@ -1,0 +1,31 @@
+doctype html
+html(lang='ru-Ru')
+	head
+		include ./themes/head.pug
+	body
+		nav.container-flued.navigation.bg-white.fixed-top.w-100
+			include ./themes/nav.pug		
+		header#home.header.d-flex.flex-column.justify-content-center.align-items-center
+			include ./themes/header.pug
+		aside.banner
+			include ./themes/bannertop.pug
+		main
+			section.timeline#timeline
+				include ./themes/timeline.pug
+			section.slider#sliders
+				include ./themes/slider.pug
+		article.products#products
+			include ./themes/products.pug
+			section.micro#micro
+				include ./themes/micro.pug
+			section.kids#kids
+				include ./themes/kids.pug
+			section.standart#standart
+				include ./themes/standart.pug
+			section.premium#premium
+				include ./themes/premium.pug
+		address.contact.my-0#contact
+			include ./themes/contact.pug
+		footer
+			include ./themes/footer.pug
+	include ./themes/scripts.pug

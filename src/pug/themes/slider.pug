@@ -1,0 +1,37 @@
+.container.py-5.text-white
+	.row.justify-content-center
+		.col-12.my-5
+			h1.text-center.text.py-lg-5.py-md-2
+				|«АТГ» выпускает широкий спектр нетканых материалов,
+				br
+				|различной плотности (от 40 г/м
+				sup 2
+				|до 500 г/м
+				sup 2
+				|),
+				br
+				|ширины и толщины (от 0,1 м до 4,5 м),
+				br
+				|предназначенных для различных отраслей, таких как:
+		.col-12
+			#slider.carousel.slide(data-ride="carousel" data-interval="5000" data-wrap="true")
+				.carousel-inner
+					.carousel-item.active
+						img.d-block.w-25.mx-auto(src='img/sofa-l.jpg', alt='Hetta')
+						.text-center.my-5
+							h1 Текстильная промышленность 1
+					.carousel-item
+						img.d-block.w-25.mx-auto(src='img/sofa-l.jpg', alt='Hetta')
+						.text-center.my-5
+							h1 Текстильная промышленность 2
+					.carousel-item
+						img.d-block.w-25.mx-auto(src='img/sofa-l.jpg', alt='Hetta')
+						.text-center.my-5
+							h1 Текстильная промышленность 3
+				a.carousel-control-prev(href="#slider" role="button" data-slide="prev")
+					span.carousel-control-prev-icon
+				a.carousel-control-next(href="#slider" role="button" data-slide="next")
+					span.carousel-control-next-icon
+span.d-flex.justify-content-center.position-absolute.w-100.text-center
+	.star.text-primary.bg-white
+		|&#9733;
