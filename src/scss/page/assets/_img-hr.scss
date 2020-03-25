@@ -1,0 +1,42 @@
+$w-img-hr: 19.5; // widht картинки
+$h-img-hr: 18.5 / 2; // height картинки
+$n-img-hr: -1;
+
+.img-hr {
+	@include media-breakpoint-down(md) {
+		display: none!important;
+	}
+	@extend .position-relative;
+	@extend .d-flex;
+	@extend .justify-content-end;
+	// @include media-breakpoint-up(lg) {
+	// 	justify-content: flex-end!important;
+	// }
+	@for $i from 1 through 5 {
+		@if $i % 2 == 0 {
+			&_#{$i} {
+				transform: scaleX(#{$n-img-hr});
+			}
+		}
+	}
+	&__images {
+		z-index: 1;
+		// width: #{$w-img-hr - 3}rem;
+		max-width: #{$w-img-hr - $indent};
+		min-width: #{$w-img-hr  / 2}rem;
+		@extend .position-absolute;
+		// top: -#{$h-img-hr + $h-img-hr}vw;
+		top:-#{$h-img-hr + $h-img-hr}rem;
+		@include media-breakpoint-up(lg) {
+			// top: -#{$h-img-hr}vw;
+			top: -#{$h-img-hr}rem;
+		}
+		&.img-hr_5{
+			top: -#{$h-img-hr / 2}rem;
+		}
+
+	}
+
+}
+
+

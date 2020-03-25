@@ -1,0 +1,20 @@
+-
+	var advantages = [
+		{'text': 'Тепло! Защищает от холода, даже при намокании одежды', 'img': 'thermometer.svg', 'alt': 'Тепло'},
+		{'text': 'Удобно! Обеспечивает комфорт и не сковывает движения', 'img': 'social-media.svg', 'alt': 'Удобно'},
+		{'text': 'Безопасно! Не токсичен и гипоаллергенен', 'img': 'student.svg', 'alt': 'Безопасно'},
+		{'text': 'Надежно! Сохраняет упругость и форму даже после многократных стирок', 'img': 'guarantee.svg', 'alt': 'Надежно'},
+		{'text': 'Экономично! Уникальное качество и теплоизоляция при меньшем объеме материала', 'img': 'piggy-bank.svg', 'alt': 'Экономично'}
+	];
+-	var title = 'Основные преимущества материалов линейки '+ mainName + ':';
+section.advantages-wrapper
+	.container-fluid
+		h2.advantages-title= title
+	.container.advantages
+		ul.advantages__list
+			each adv in advantages
+				li.media.advantages__media
+					.icon.advantages__media-icon
+						img.img(src='img/icon/'+adv.img alt=adv.alt data-toggle='tooltip' data-placement='left' title=adv.alt)
+					.media-body
+						p.advantages__media-text= adv.text 

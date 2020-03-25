@@ -1,0 +1,19 @@
+if tablesTitle
+	h3.tables__title !{tablesTitle}
+if table
+	table.table.tables__table
+		thead
+			tr
+				th Материал
+				th Плотность г/м&sup2;
+				th Суммарное тепловое сопротивление, м&sup2; С/ВТ
+				th Намотка, м
+		tbody
+			each td in table
+				+table(td)
+	if tablesText
+		.tables__text
+			each tabtext in tablesText
+				p Состав: #{tabtext.comp} 
+				p Ширина полотна: #{tabtext.width}
+				p Плотность: #{tabtext.density}

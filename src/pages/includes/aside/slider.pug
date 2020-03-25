@@ -1,0 +1,26 @@
+-
+	var sliders = [
+		{'text': 'Спецодежда', 'img': 'specodezhda.jpg'},
+		{'text': 'Детская одежда', 'img': 'baby.jpg'},
+		{'text': 'Верхняя одежда', 'img': 'outerwear.jpg'},
+		{'text': 'Текстиль для дома', 'img': 'home.jpg'},
+		{'text': 'Мягкая мебель', 'img': 'furniture.jpg'}
+	];
+- var title = '«АТГ» выпускает широкий спектр нетканых материалов, <br>различной плотности (от 40 г/м<sup>2</sup>до 500 г/м<sup>2</sup>), <br>ширины и толщины (от 0,1 м до 4,5 м), <br>предназначенных для различных отраслей, таких как:';
+- var interval = '5000';
+mixin slider(slide)
+	img.slider__img(src='img/slider/' + slide.img alt=slide.text.toLowerCase() title=slide.text.toLowerCase() )
+	figcaption.slider__caption
+		h4.slider__text= slide.text
+section#industry.slider-wrapper
+	.container
+		h2.slider__title !{title}
+		#slider.carousel.slider.carousel-fade(data-ride="carousel" data-interval=interval data-wrap="true")
+			.carousel-inner
+				each slide, index in sliders
+					.carousel-item(class=index==0 ? 'active' : '')
+						+slider(slide)
+			a.carousel-control-prev(href="#slider" role="button" data-slide="prev")
+				span.carousel-control-prev-icon
+			a.carousel-control-next(href="#slider" role="button" data-slide="next")
+				span.carousel-control-next-icon

@@ -1,0 +1,32 @@
+script(src="js/scripts.js")
+script(src="js/jquery.validate.min.js")
+
+//- Yandex.Metrika counter
+script(type="text/javascript").
+	(function (m, e, t, r, i, k, a) {m[i] = m[i] || function () {(m[i].a = m[i].a || []).push(arguments) };m[i].l = 1 * new Date();k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,a)})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");ym(48109004, "init", {id: 48109004,clickmap: true,trackLinks: true,accurateTrackBounce: true,webvisor: true,trackHash: true});
+noscript
+	img(src="https://mc.yandex.ru/watch/48109004" style="position:absolute; left:-9999px;" alt="")
+//- Yandex.Metrika counter
+//- Global site tag (gtag.js) - Google Analytics
+script(async src="https://www.googletagmanager.com/gtag/js?id=UA-114300-25")
+script.
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-114300-25');
+script(type = 'application / ld + json').
+	{
+		"@context": "http://www.schema.org",
+		"@type": "product",
+		"brand": "#{mainName}",
+		"url": "https://hetta.pro/",
+		"logo": "https://hetta.ru/img/logo-blue.png",
+		"description": "Фабрика нетканых материалов и синтепона российского производства #{mainName}: Standart, Micro, Kids, Premium",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "Санкт-Петербург",
+			"addressLocality": "Санкт-Петербург",
+			"addressCountry": "Россия"
+		},
+		"openingHours": "Mo, Tu, We, Th, Fr 09:00-18:00"
+	}

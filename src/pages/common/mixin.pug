@@ -1,0 +1,48 @@
+mixin img(src, alt)
+	if src, alt
+		img.img(src='img/'+src alt=mainName.toLowerCase()+'_'+alt.toLowerCase() title=mainName.toLowerCase() +'_'+alt.toLowerCase() itemprop='image')
+mixin product(text) 
+	if text
+		p.text.texts-text(itemprop="description") !{text}
+		.d-none
+			div(itemprop="offers" itemscope itemtype="http://schema.org/Offer") 
+				span(itemprop="price") 100%
+				span(itemprop="priceCurrency") RUB
+mixin table(td)
+	if mainName, td
+		tr
+			td= mainName+'®' + td.material
+			td= td.density
+			td= td.warmth
+			td= td.winding
+
+mixin icon(icon)
+	if icon
+		.icon.icons__list-icon
+			img.img(src='img/icon/' + icon.img, alt=icon.alt data-toggle="tooltip" data-placement="left" title=icon.alt )
+mixin form(formVal)
+	if formVal
+		if formVal.name != 'message'
+			input.form-control(
+				id= formVal.name +'-input',
+				type= formVal.type,
+				name= formVal.name,
+				placeholder= formVal.placeholder + '*',
+				required
+			)
+		else
+			textarea.form-control(
+				id= formVal.name +'-input',
+				cols='30',
+				rows='5',
+				name= formVal.name,
+				placeholder= formVal.placeholder,
+			)
+			
+mixin btnMix(btnName, mainName, goods)
+	if (btnName == 'modal')
+		button.btn.btn-modal(
+		type='button'
+		data-toggle='modal'
+		data-target='#formModal'
+		title= mainName + ' ' + goods) Заказать образец

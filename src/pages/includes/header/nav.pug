@@ -1,0 +1,28 @@
+-
+	var menu = [
+		{'href': 'home', 'name': 'Главная'},
+		{'href': 'history', 'name': 'История'},
+		{'href': 'industry', 'name': 'Отрасли'},
+		{'href': 'products', 'name': 'Продукция', 'dropdown': 'true'},
+		{'href': 'contact', 'name': 'Контакты'}
+	];
+.navigation(role="navigation")
+	.container
+		nav.menu#menu
+			each item, index in menu
+				if !item.dropdown
+					a.nav-item.nav-link(class= index==0 ? 'active' : '', href="#" +item.href.toLowerCase())= item.name
+				else
+					.nav-item.nav-item__dropdown
+						a.nav-link#dropdownMenu(href="#" +item.href.toLowerCase())= item.name
+						if nameGoods.length != 0
+							a.caret.dropdown-toggle-split.dropdown-toggle(
+								type="button"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+								data-offset="5,0"
+							)
+							.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenu")
+								each goods in nameGoods
+									a.dropdown-item(href="#" +goods.toLowerCase())= mainName +' '+ goods.toUpperCase() + '™'

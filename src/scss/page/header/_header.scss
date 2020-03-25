@@ -1,0 +1,37 @@
+.header-wrapper  {
+	background-image: url('./../img/header.jpg');
+	@extend %bg-img;
+	@extend .vh-100;
+}
+.header {
+	&__row {
+		@extend .h-100;
+		@extend .py-5;
+		@extend .align-items-center;
+		@extend .text-center;
+	}
+	&__block {
+		&-1 {
+			@extend .align-self-end;
+		}
+		&-2 {
+
+		}
+	}
+	&__logo {
+		@extend .mb-5;
+		@extend .pb-5;
+		max-width: 30rem;
+	}
+	&__title {
+		@extend .mb-0;
+		@extend .text-white;
+		@include text-shadow($black);
+		@extend .text-uppercase;
+		font-weight: $font-weight-normal;
+		
+	}
+	#textheader {
+		display: none;
+	}
+}

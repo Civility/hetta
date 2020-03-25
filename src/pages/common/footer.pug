@@ -1,0 +1,12 @@
+if mainName
+	footer.footer-wrapper
+		.container.footer(itemscope itemtype = "http://schema.org/Organization")
+			.row
+				.col-12
+					.footer__img
+						img(src='img/logo-white.png', alt=mainName itemprop = "logo")
+				.col-12
+					span.footer__copy(itemprop = "name") ©
+						script.
+							document.write(new Date().getFullYear());
+						|  #{mainName}&trade;

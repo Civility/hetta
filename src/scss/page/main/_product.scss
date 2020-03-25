@@ -1,0 +1,135 @@
+@each $id, $positionY in (micro: 50%, extra: 50%, standart: 50%, filt: 50%, premium: 0) {
+	.#{$id} {
+		.images {
+			background-image: url('../img/#{$id}.jpg');
+			background-position-y: $positionY;
+		}
+	}
+}
+.product {
+	&-wrapper {
+		
+	}
+	&:nth-child(even) {
+		.product__texts, .product__icons {
+			@extend .order-first;
+		}
+		.product__icons {
+			@extend .bg-danger;
+		}
+		.product__tables {
+			.tables__title {
+				@extend .text-right;
+			}
+			.tables__text {
+				@extend .text-left;
+			}
+		}
+		.img-hr {
+			@extend .justify-content-start;
+		}
+	}
+
+	&:nth-child(3n+1){
+		.product__icons{
+			@extend .bg-primary;
+		}
+	}
+
+	&__tables {
+		@extend .table-responsive;
+		@extend .bg-dark;
+		@extend .text-white;
+		@extend .font-weight-light;
+		@extend %px-indent;
+		@extend %py-indent;
+	}
+	&__icons {
+		@extend %px-indent;
+		@extend %py-indent;
+		@extend .bg-info;
+	}
+	&__texts {
+		@extend %px-indent;
+		@extend %py-indent;
+
+	}
+	&__images {
+
+	}
+}
+
+.texts {
+	&__title {
+		@extend .display-2;
+		@extend .font-weight-normal;
+		@extend .text-dark;
+		@extend .text-capitalize;
+		span {
+			@extend .text-uppercase;
+		}
+	}
+}
+
+.images {
+	margin-left: -$grid-gutter-width / 2;
+	margin-right: -$grid-gutter-width / 2;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: 50%;
+	@extend .mh-100;
+	@extend .h-100;
+	@extend %images-shadow;
+	min-height: 30rem;
+}
+
+.tables {
+	&__table {
+		@extend .table-bordered;
+		@extend .text-white;
+		@extend .text-center;
+	}
+	&__title {
+		@extend .mb-3;
+		@extend .text-white;
+		@include text-shadow($black);
+	}
+
+	&__text {
+		@extend caption;
+		@extend .text-right;
+		& > * {
+			@extend .mb-1;
+		}
+	}
+}
+
+.icons {
+	@extend .h-100;
+	@extend .d-flex;
+	@extend .flex-wrap;
+
+	&__title {
+		@extend .mb-3;
+		@extend .text-white;
+		@include text-shadow($black);
+	}
+	&__list {
+		@extend .list-inline;
+		@extend .w-100;
+		@extend .mb-0;
+
+		& > li {
+			@extend .m-lg-3;
+			@extend .m-2;
+			@extend .d-flex;
+			@extend .justify-content-around;
+		}
+
+		&-icon {
+			@extend .bg-white;
+			@extend .border-0;
+		}
+
+	}
+}

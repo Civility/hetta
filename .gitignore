@@ -4,5 +4,5 @@ libs
 Desktop.ini
 bower_components
 node_modules
-dist
+dest
 .git

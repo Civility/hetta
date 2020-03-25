@@ -1,0 +1,7 @@
+.contact {
+	&__title{
+		@extend .text-white;
+		@extend .text-center;
+		@include text-shadow($black);
+	}
+}

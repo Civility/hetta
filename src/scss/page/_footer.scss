@@ -1,12 +1,21 @@
-//contact
-.contact{
-	background: url(../img/contact.jpg)no-repeat 0 100%;
-	min-height: 100vh;
-	background-size: cover;
-	.card{
-		background-color: transparent;
+.footer {
+	@extend .text-center;
+	@extend .text-white;
+	&-wrapper {
+		@extend .bg-primary;
+		@extend %py-indent;
 	}
-	.form-control{
-		border-color: $primary;
+	&__img {
+		@extend .mb-xl-5;
+		@extend .mb-3;
+		img {
+			max-width: max-content;
+		}	
+	}
+	&__copy {
+		@extend .mb-0;
+		@extend .h4;
+		@extend .text-white;
+		font-weight: $font-weight-normal;
 	}
 }

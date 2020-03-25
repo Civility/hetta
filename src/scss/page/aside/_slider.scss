@@ -1,0 +1,55 @@
+.slider {
+	@extend %my-indent;
+	&-wrapper {
+		background-image: url(./../img/slider.jpg);
+		@extend %bg-img;
+		@extend %py-indent;
+		@extend .h-100;
+		&::before {
+			content: "";
+			@extend .position-absolute;
+			@extend .w-100;
+			@extend .h-100;
+			background-color: rgba($primary, 0.75);
+			top: 0;
+			right: 0;
+			left: 0;
+		}
+	}
+	&__title {
+		@extend .text-center;
+		@extend .position-relative;
+		@extend .text-white;
+		@extend %my-indent;
+		line-height: $line-height-lg;
+	}
+	&__img {
+		@extend .d-block;
+		@extend .border;
+		@extend .border-white;
+		// border-width: .3rem!important;
+		@extend .rounded-circle;
+		@extend .w-50;
+		@extend .mx-auto;
+	}
+	&__caption {
+		@extend .carousel-caption;
+		@extend .d-flex;
+		// @extend .d-none;
+		@extend .justify-content-center;
+		@extend .flex-column;
+		@extend .h-100;
+		@extend .m-auto;
+		@include media-breakpoint-down(lg) {
+			position: relative;
+			left: auto;
+			right: auto;
+		}
+	}
+	&__text {
+		@include text-shadow($black);
+		@extend .text-white;
+		@extend .h1;
+		@extend .mb-0;
+	}
+}

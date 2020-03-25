@@ -1,0 +1,32 @@
+{
+	"baseDir": 		"./dest/",
+    "dest": {
+		"pug": 		"./dest/",
+		"script": 	"./dest/js/",
+		"scss": 	"./dest/css/",
+		"img": 		"./dest/img/",
+		"fonts":  	"./dest/fonts/",
+		"favicon": 	"./dest/img/favicons/",
+		"copy": 	"dest/assets/"
+	},
+	"src": {
+		"pug": 		"./src/pages/*.pug",
+		"script": [
+			"./node_modules/jquery/dist/jquery.min.js",
+			"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+			"./src/js/*.js"
+		 ],
+		"scss": 	"./src/scss/*.scss",
+		"img": 		["./src/images/**/*.{gif,png,jpg,svg,webp}", "!src/images/favicon/**"],
+		"fonts": 	[ "./src/fonts/**/*", "./node_modules/@fortawesome/fontawesome-free/webfonts/*{.eot,svg,ttf,woff,woff2}"],
+		"favicon": "./src/images/favicon/favicon.{jpg,jpeg,png,gif,tiff,svg}",
+		"validator": ["./node_modules/jquery-validation/dist/jquery.validate.min.js"],
+		"copy": ["./src/assets/php/*.php", "./src/assets/add/*.*"]
+	},
+	"watch" : {
+		"pug": 		"./src/pages/**/*.pug",
+		"script": 	"./src/js/**/*.js",
+		"scss": 	"./src/scss/**/*.scss",
+		"img": 		"./src/images/*/*.{gif,png,jpg,svg,webp}"	
+	}
+}

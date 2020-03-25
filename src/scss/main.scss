@@ -1,57 +1,66 @@
-@import "../../bower_components/bootstrap/scss/functions";
-@import "../../bower_components/bootstrap/scss/variables";
-@import "../../bower_components/bootstrap/scss/mixins";
-@import "../../bower_components/bootstrap/scss/reboot";
-@import "../../bower_components/bootstrap/scss/type";
-@import "../../bower_components/bootstrap/scss/images";
-@import "../../bower_components/bootstrap/scss/grid";
-@import "../../bower_components/bootstrap/scss/forms";
-@import "../../bower_components/bootstrap/scss/media";
-@import "../../bower_components/bootstrap/scss/utilities";
-@import "../../bower_components/bootstrap/scss/buttons";
-@import "../../bower_components/bootstrap/scss/custom-forms";
-@import "../../bower_components/bootstrap/scss/card";
-@import "../../bower_components/bootstrap/scss/button-group";
-@import "../../bower_components/bootstrap/scss/input-group";
-@import "../../bower_components/bootstrap/scss/jumbotron";
-@import "../../bower_components/bootstrap/scss/carousel";
-@import "../../bower_components/bootstrap/scss/transitions";
-@import "../../bower_components/bootstrap/scss/tables";
-@import "../../bower_components/bootstrap/scss/nav";
-@import "../../bower_components/bootstrap/scss/navbar";
-@import "../../bower_components/bootstrap/scss/list-group";
-@import "../../bower_components/bootstrap/scss/dropdown";
-@import "../../bower_components/bootstrap/scss/bootstrap-reboot";
-@import "../../bower_components/bootstrap/scss/grid";
-@import "../../bower_components/bootstrap/scss/root";
+@font-face {
+	font-family: 'Foros';
+	src: url('../fonts/Foros-Regular/Foros-Regular.eot');
+	src: local('../fonts/Foros-Regular/Foros Regular'), local('../fonts/Foros-Regular/Foros-Regular'),
+		url('../fonts/Foros-Regular/Foros-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Foros-Regular/Foros-Regular.woff') format('woff'),
+		url('../fonts/Foros-Regular/Foros-Regular.ttf') format('truetype'),
+		url('../fonts/Foros-Regular/Foros-Regular.otf') format('otf');
+	font-weight: normal;
+	font-style: normal;
+}
 
-@import "styles";
-/* 
-@import "fontawesome"; 
-*/
-/*
+@font-face {
+	font-family: 'Foros';
+	src: url('../fonts/Foros-Medium/Foros-Medium.eot');
+	src: local('../fonts/Foros-Medium/Foros Medium'), local('../fonts/Foros-Medium/Foros-Medium'),
+		url('../fonts/Foros-Medium/Foros-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Foros-Medium/Foros-Medium.woff') format('woff'),
+		url('../fonts/Foros-Medium/Foros-Medium.ttf') format('truetype'),
+		url('../fonts/Foros-Medium/Foros-Medium.otf') format('otf');
+	font-weight: 500;
+	font-style: normal;
+}
 
+@font-face {
+	font-family: 'Foros';
+	src: url('../fonts/Foros-Bold/Foros-Bold.eot');
+	src: local('../Foros-Bold/fonts/Foros Bold'), local('../fonts/Foros-Bold/Foros-Bold'),
+		url('../fonts/Foros-Bold/Foros-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Foros-Bold/Foros-Bold.woff') format('woff'),
+		url('../fonts/Foros-Bold/Foros-Bold.ttf') format('truetype'),
+		url('../fonts/Foros-Bold/Foros-Bold.otf') format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+// main
+@import "untils/bootstrap";
+@import "untils/default";
+// @import "untils/fontawesome";
 
+// assets
+@import "page/assets/modal";
+@import "page/assets/star";
+@import "page/assets/img-hr";
+@import "page/assets/form";
 
+// header
+@import "page/header/navigation";
+@import "page/header/header";
 
+// aside
+@import "page/aside/banner";
+@import "page/aside/timeline";
+@import "page/aside/slider";
 
+// contact
+@import "page/contact/address";
+@import "page/contact/contact";
 
+// products
+@import "page/main/productList";
+@import "page/main/advantages";
+@import "page/main/product";
 
-@import "../../bower_components/bootstrap/scss/code";
-
-
-@import "../../bower_components/bootstrap/scss/breadcrumb";
-@import "../../bower_components/bootstrap/scss/pagination";
-@import "../../bower_components/bootstrap/scss/badge";
-
-@import "../../bower_components/bootstrap/scss/alert";
-@import "../../bower_components/bootstrap/scss/progress";
-
-@import "../../bower_components/bootstrap/scss/close";
-@import "../../bower_components/bootstrap/scss/modal";
-@import "../../bower_components/bootstrap/scss/tooltip";
-@import "../../bower_components/bootstrap/scss/popover";
-
-@import "../../bower_components/bootstrap/scss/print";
-
-*/
+// footer
+@import "page/footer";

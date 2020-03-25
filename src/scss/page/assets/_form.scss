@@ -1,0 +1,12 @@
+.form {
+	.custom-checkbox {
+		label {
+			@extend .text-white;
+			@include text-shadow($black);
+		}
+	}
+	.submit {
+		@extend .btn-primary;
+		@extend .btn-block;
+	}
+}

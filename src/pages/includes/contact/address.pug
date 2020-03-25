@@ -1,0 +1,20 @@
+-
+	var address = [
+		{'city': 'Санкт-Петербург', 'telhref': '8124267447', 'tel': '812 426 74 47', 'mobhref': '9214115916', 'mob': '921 411 59 16', 'plus': '2140'},
+		{'city': 'Москва', 'telhref': '4996491414', 'tel': '499 649 14 14', 'mobhref': '9645734411', 'mob': '964 573 44 11', 'plus': '4934'}
+	];
+address#contact.address-wrapper(itemscope itemtype='http://schema.org/Organization')
+	h2.address__title(itemprop='address' itemscope itemtype='http://schema.org/PostalAddress') Контакты
+	.container.address
+		.row
+			each adds, i in address
+				.col-12.address__col
+					h3.address__col-city= adds.city
+					span.address__col-phone
+						| тел.
+						a(href='tel:8' + adds.telhref) +7 #{adds.tel} 
+						| (доб.#{adds.plus})
+						br
+						| моб.
+						a(href='tel:8' + adds.mobhref) +7 #{adds.mob}
+	include ./contact.pug

@@ -1,0 +1,27 @@
+- var goods = 'Micro';
+- var src = 'micro.jpg';
+- var srcHr = 'hettamicro.png';
+- var alt = goods;
+- var tablesTitle = 'Технические характеристики материала:';
+-
+	var table = [
+		{'material': goods, 'density': '100', 'warmth': '0,37', 'winding': '50,00'},
+		{'material': goods, 'density': '150', 'warmth': '0,46', 'winding': '40,00'},
+		{'material': goods, 'density': '200', 'warmth': '0,52', 'winding': '30,00'}
+	];
+-
+	var tablesText = [
+		{'comp': '100% полиэфирные микроволокна', 'width': 'от 1,5 м до 3,2 м', 'density': 'от 40 г/м² до 500 г/м²'}
+	];
+-
+	var icons = [
+		{'img': 'thermometer.svg', 'alt': 'Тепло'},
+		{'img': 'social-media.svg', 'alt': 'Удобно'},
+		{'img': 'student.svg', 'alt': 'Безопасно'},
+		{'img': 'guarantee.svg', 'alt': 'Надежно'},
+		{'img': 'piggy-bank.svg', 'alt': 'Экономично'}
+	];
+
+- var text = mainName + ' '+ goods + ' – специально разработанный материал, предназначенный для использования в качестве утеплителя при производстве высококачественной одежды, спецодежды. Изготавливается с использованием микроволокон, что позволяет эффективно удерживать тепло, и в то же время, обеспечивать высокую воздухопроницаемость.';
+
+include ./../product.pug

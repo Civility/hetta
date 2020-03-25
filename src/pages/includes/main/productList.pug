@@ -1,0 +1,23 @@
+-
+	var productList = [
+		{'title': 'Синтепон', 'topText': 'Синтепон это легкий, объемый нетканый материал, который изготавливается из полиэфирных волокон, методом термоскрепления.', 'listTitle': 'Сферы применения:', 'listItem': ['текстильная промышленность', 'мебельное производство', 'производство матрасов', 'строительство', 'производство фильтров'], 'downText': '«АТГ» выпускает синтепон различных плотностей от 40 до 500 г/м<sup>2</sup> и различных ширин от 0,1 до 4,5 м. <br>По желанию клиента возможно'},
+		{'title': mainName + '®', 'topText': mainName+' это специально разбоработанная компанией «АТГ» линейка высококлассных нетканых материалов, которые изготавливаются из высококачественного первичного сырья, методом термоскрепления волокон.', 'listTitle': 'Уникальные свойства материалов позволяют использовать их в различных отраслях производства:', 'listItem': ['текстильная промышленность (утеплители для верхней одежды, специальной и детской одежды)', 'мебельное производство', 'производство матрасов', 'производство фильтров']}
+	];
+- var title = 'Перечень выпускаемой продукции компанией «АТГ»:';
+ 
+section#products.product-list-wrapper
+	h2.product-list__title= title
+	.product-list.row.row-cols-1.row-cols-lg-2.no-gutters
+		each list, index in productList
+			.col
+				.card.product-list__card
+					.card-header.product-list__card-header(class=index==0 ? 'bg-danger' : 'bg-primary')
+						h3.product-list__card-title= list.title
+					.card-body.product-list__card-body
+						p.product-list__card-text !{list.topText}
+						p.product-list__card-text.mb-3 !{list.listTitle}
+						ul
+							each item in list.listItem
+								li.product-list__card-text=item
+						if 	list.downText
+							p.product-list__card-text !{list.downText}

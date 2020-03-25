@@ -1,0 +1,19 @@
+include ./../../common/mixin.pug
+.product(class=goods.toLowerCase(), id= goods.toLowerCase(), itemscope itemtype="http://schema.org/Product")
+	.container-fluid
+		.row
+			.col-xl-7.product__images
+				.images(itemprop='image')
+				include ./../assets/img-hr.pug
+			.col-xl-5.product__texts
+				.texts
+					include ./../assets/text.pug
+	.container-fluid
+		.row
+			.col-xl-6.product__tables
+				.tables
+					include ./../assets/tables.pug
+			.col-xl-6.product__icons
+				.icons
+					include ./../assets/icons.pug
+		include ./../assets/star-white.pug

@@ -1,0 +1,13 @@
+block variables
+doctype html
+html(lang='ru')
+    head
+        include ./../common/head.pug
+    body(data-spy="scroll" data-target="#menu")
+        block header
+        block aside
+        block main
+            block product
+        block address
+        include ./../common/footer.pug
+    include ./../common/scripts.pug

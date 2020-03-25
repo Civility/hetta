@@ -1,0 +1,6 @@
+if goods
+	h2.texts__title(itemprop="name") #{mainName} 
+		span= goods+'™'
+if text
+	+product(text)
+	+btnMix('modal', mainName, goods)

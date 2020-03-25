@@ -1,0 +1,7 @@
+if mainName, goods
+	h3.icons__title Преимущества утеплителя для одежды #{mainName} !{goods}:
+if icons
+	ul.row.no-gutters.icons__list
+		each icon in icons
+			li.col
+				+icon(icon)

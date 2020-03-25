@@ -1,0 +1,31 @@
+.product-list{
+	@extend %my-indent;
+	@extend .mb-0;
+	&-wrapper {
+		@extend %py-indent;
+	}
+	&__title {
+		@extend .text-center;
+		@extend .h1;
+		@extend .container-fluid;
+	}
+	&__card {
+		&-header {
+			@extend .mb-lg-5;
+			@extend .mb-3;
+		}
+		&-title {
+			@extend .text-white;
+			@extend .h2;
+			@extend %my-indent;
+			@extend .text-center;
+		}
+		&-text {
+			@extend .card-text;
+			@extend .text-primary;
+			@extend .h4;
+			@extend .mb-1;
+			font-weight: $font-weight-normal;
+		}
+	}
+}

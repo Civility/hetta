@@ -1,0 +1,28 @@
+.star {
+	z-index: 2;
+	@extend .position-relative;
+	top: -3rem;
+	@extend .d-flex;
+	@extend .justify-content-center;
+	@include media-breakpoint-down(lg) {
+		top: -2rem;
+	}
+	@each $star in primary, white  {
+		&__icon-#{$star} {
+			@extend .bg-#{$star};
+			@extend .border-0;
+			@extend .position-absolute;
+			&::after {
+				@if $star == primary {
+					@extend .text-white;
+				} @else {
+					@extend .text-primary;	
+				}
+				content: "★";
+				@extend .display-1;
+			}
+		}
+	}
+	
+}
+

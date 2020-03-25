@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /form/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /form/
+
+User-agent: Yandex
+Allow: /img/
+Disallow: /form/
+
+Host: https://hetta.pro/
+Sitemap: https://hetta.pro/sitemap.xml

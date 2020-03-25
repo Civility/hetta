@@ -1,0 +1,34 @@
+extends layout/layout
+
+block variables
+	- var mainName = 'Hetta'
+	- var headtitle = 'Нетканые материалы «'+mainName+'»'
+	- var indexNumber = 1;
+	- var nameGoods = ['micro', 'extra' , 'standart', 'filt', 'premium'];
+block header
+	include ./includes/assets/modal.pug
+	include ./includes/header/nav.pug
+	include ./includes/header/header.pug
+block aside
+	aside
+		include ./includes/aside/banner.pug
+		include ./includes/assets/star-primary.pug
+		include ./includes/aside/timeline.pug
+		include ./includes/assets/star-white.pug
+		include ./includes/aside/slider.pug
+		include ./includes/assets/star-white.pug
+block main
+	main
+		include ./includes/main/productList.pug
+		include ./includes/assets/star-primary.pug
+		include ./includes/main/advantages.pug
+		include ./includes/assets/star-primary.pug
+		block product
+			section.product-wrapper
+				include ./includes/main/product/micro.pug
+				include ./includes/main/product/extra.pug
+				include ./includes/main/product/standart.pug
+				include ./includes/main/product/filt.pug
+				include ./includes/main/product/premium.pug
+block address
+	include ./includes/contact/address.pug

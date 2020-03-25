@@ -1,0 +1,33 @@
+.address {
+	@extend %py-indent;
+	@extend .text-center;
+	&-wrapper {
+		@extend .m-0;
+		background-image: url(./../img/contact.jpg);
+		@extend %bg-img;
+		@extend %py-indent;
+		background-attachment: fixed;
+		background-position: 0 100%;
+	}
+	&__title {
+		@extend .text-center;
+		@extend .text-primary;
+		@extend %my-indent;
+		@extend .display-3;
+	}
+	&__col {
+		@extend .mb-3;
+		&-city {
+			@extend .h2;
+			@extend .mb-3;
+			@extend .text-body;
+			font-weight: $font-weight-normal;
+		}
+		&-phone {
+			@extend .h4;
+			font-weight: $font-weight-normal;
+			@extend .text-body;
+		}
+	}
+
+}

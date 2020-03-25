@@ -1,0 +1,89 @@
+@mixin text-shadow($color) {
+	text-shadow: 0 .1rem .3rem $color
+}
+
+%bg-img {
+	overflow: hidden;
+	@extend .position-relative;
+	box-sizing: border-box;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+// %text-shadow{text-shadow: 0 .1rem .3rem $black}
+%images-shadow{box-shadow: 2rem 0rem 2rem 0rem white inset;}
+
+$indent: 3rem;
+
+%bigger {
+	font-size: $font-size-lg;
+}
+.text {
+	@extend %bigger;
+	font-weight: $font-weight-light;
+}
+.img {
+	@extend .img-fluid;
+	@extend .w-100;
+}
+.icon {
+	width: $indent + 3;
+	height: $indent + 3;
+	@include media-breakpoint-down(lg) {
+		width: $indent + 2;
+		height: $indent + 2;
+	}
+	
+	@extend .p-3;
+	@extend .border;
+	@extend .rounded-circle;
+	@extend .position-relative;
+	@extend .d-flex;
+	@extend .justify-content-center;
+	@extend .align-items-center;
+	// @extend .mx-auto;
+}
+
+//my-indent
+%my-indent {
+	margin-top: #{$indent * 2};
+	margin-bottom: #{$indent * 2};
+}
+@include media-breakpoint-down(lg) {
+	%my-indent {
+		margin-top: #{$indent};
+		margin-bottom: #{$indent};
+	}
+}
+
+// py-indent
+%py-indent {
+	padding-top: #{$indent * 2};
+	padding-bottom: #{$indent * 2};
+}
+@include media-breakpoint-down(lg) {
+	%py-indent {
+		padding-top: #{$indent};
+		padding-bottom: #{$indent};
+	}
+}
+// %px-indent
+%px-indent {
+	padding-left: #{$indent * 2};
+	padding-right: #{$indent * 2};
+}
+@include media-breakpoint-down(lg) {
+	%px-indent {
+		padding-left: #{$indent};
+		padding-right: #{$indent};
+	}
+}
+
+.btn-modal {
+	@extend.btn-danger;
+	@extend .shadow-none;
+	@extend .d-flex;
+	@extend .mx-auto;
+	@extend .mt-5;
+}

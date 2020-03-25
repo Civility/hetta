@@ -1,0 +1,20 @@
+include ./../../common/mixin.pug
+-
+	var arrform = [
+		{'name': 'name', 'col': '4', 'placeholder': 'Имя', 'type': 'text' },
+		{'name': 'email', 'col': '4', 'placeholder': 'Email', 'type': 'email'},
+		{'name': 'phone', 'col': '4', 'placeholder': 'Телефон', 'type': 'text'},
+		{'name': 'message','col': '12', 'placeholder': 'Сообщение', 'type': ''}
+	];
+form.form(id=idForm, role="form")
+	.form-row
+		each formVal in arrform
+			div(class='col-lg-'+formVal.col).mb-4
+				+form(formVal)
+	.form-group
+		.custom-control.custom-checkbox
+			input.agreement.custom-control-input(id=idForm +'Checkbox' type="checkbox" name=idForm +'Checkbox' required)
+			label.custom-control-label(for=idForm +'Checkbox') Я согласен на обработку персоональных данных
+	.form-group
+		button.btn.submit(id=idForm+'Submit' disabled role="button" type="submit"  name='nameForm' title='Форма ' + mainName) Отправить
+	span.result.form-text.invisible(role="alert")

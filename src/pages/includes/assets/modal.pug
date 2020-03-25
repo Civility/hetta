@@ -1,0 +1,10 @@
+- var idForm = 'feedback2'
+#formModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+	.modal-dialog.modal-lg(role='document')
+		.modal-content
+			.modal-header
+				h3.modal-title Заказать образец
+				button.close(type='button', data-dismiss='modal', aria-label='Закрыть')
+					span(aria-hidden='true') &times;
+			.modal-body
+				include ./form.pug

@@ -1,0 +1,19 @@
+.banner-wrapper {
+    @extend %py-indent;
+}
+.banner {
+    @extend .jumbotron;
+    @extend .jumbotron-fluid;
+    @extend %my-indent;
+    &__title {
+        // @extend .h1;
+        @extend .mb-0;
+        @extend .text-center;
+        line-height: $line-height-sm;
+        font-size: $h1-font-size;
+		@include media-breakpoint-down(lg) {
+            font-size: $h3-font-size;	
+            line-height: $line-height-base;
+		}
+    }
+}
